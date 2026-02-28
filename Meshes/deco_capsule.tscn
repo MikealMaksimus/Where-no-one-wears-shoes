@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnq6tsqs1xscx"]
+
+[ext_resource type="PackedScene" uid="uid://d2kvqtmad3wat" path="res://Models/capsule1.2.glb" id="1_r0rq6"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_qlwwh"]
+height = 2.8896484
+radius = 1.0175781
+
+[node name="DecoCapsule" instance=ExtResource("1_r0rq6")]
+
+[node name="Roundcube_001" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13282716, 0.22725779, 0.15920681)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15768147, 0.33935547, 0.1389817)
+shape = SubResource("CylinderShape3D_qlwwh")

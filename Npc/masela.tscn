@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8hqn504a7g4d"]
+
+[ext_resource type="PackedScene" uid="uid://d2p7isohjymis" path="res://Models/Masela.glb" id="1_8ty23"]
+[ext_resource type="Script" uid="uid://cpk8fmfa387d3" path="res://Npc/masela.gd" id="2_8r1sc"]
+[ext_resource type="AudioStream" uid="uid://deoiuwl10dtyn" path="res://Voices/Come inside.mp3" id="3_i8luw"]
+[ext_resource type="AudioStream" uid="uid://br3roy7xffpxv" path="res://Voices/Excellent choise.mp3" id="4_4drc0"]
+[ext_resource type="AudioStream" uid="uid://dl3vtbqy27mg4" path="res://Voices/Hmm.mp3" id="5_3ekui"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ty23"]
+size = Vector3(0.44995117, 2.1833496, 0.36730957)
+
+[node name="Masela" instance=ExtResource("1_8ty23")]
+script = ExtResource("2_8r1sc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32885596, 0.42600754, -0.012402277)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18835449, -0.29162598, 0.017639156)
+shape = SubResource("BoxShape3D_8ty23")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4"]
+stream = ExtResource("3_i8luw")
+
+[node name="Choise" type="AudioStreamPlayer3D" parent="." index="5"]
+stream = ExtResource("4_4drc0")
+
+[node name="Poor" type="AudioStreamPlayer3D" parent="." index="6"]
+stream = ExtResource("5_3ekui")
+
+[connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

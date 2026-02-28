@@ -1,0 +1,22 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://dd3xhkxwvhl04"]
+
+[ext_resource type="Texture2D" uid="uid://dkoj0ecu3rtk7" path="res://Textures/DaySky.jpg" id="1_5ui4a"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2xbhm"]
+panorama = ExtResource("1_5ui4a")
+
+[sub_resource type="Sky" id="Sky_ai0ov"]
+sky_material = SubResource("PanoramaSkyMaterial_2xbhm")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_ai0ov")
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.19795087, 0.22243714, 0.25182414, 1)
+fog_density = 0.0
+fog_aerial_perspective = 0.75
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+adjustment_enabled = true
+adjustment_contrast = 2.5

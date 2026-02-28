@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://de733r5vp2jn8"]
+
+[ext_resource type="PackedScene" uid="uid://cq0a7reppmlfq" path="res://Models/Desk.glb" id="1_x56oe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e4sdn"]
+size = Vector3(2.2792358, 2.0108032, 2.112854)
+
+[node name="Desk" instance=ExtResource("1_x56oe")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0"]
+transform = Transform3D(0.3412711, 0, 0, 0, 0.5196133, 0, 0, 0, 0.99862826, 0, -0.39910173, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011627187, -0.006805539, 0.009429813)
+shape = SubResource("BoxShape3D_e4sdn")

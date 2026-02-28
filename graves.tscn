@@ -1,0 +1,125 @@
+[gd_scene load_steps=2 format=3 uid="uid://do04sy2o6fvia"]
+
+[ext_resource type="PackedScene" uid="uid://dn72ebyirr3cg" path="res://Meshes/tomb.tscn" id="1_ripkk"]
+
+[node name="Graves" type="Node3D"]
+
+[node name="Tomb" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0.2148956, -42)
+
+[node name="Tomb5" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0.2148956, -58.529026)
+
+[node name="Tomb6" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0.2148956, -61.91452)
+
+[node name="Tomb7" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0.2148956, -65.54887)
+
+[node name="Tomb8" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0.2148956, -68.24037)
+
+[node name="Tomb9" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9964401, 0, -0.084303945, 0, 1, 0, 0.084303945, 0, 0.9964401, 22.246193, 0.2148956, -68.12698)
+
+[node name="Tomb10" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9933948, 0, 0.11474643, 0, 1, 0, -0.11474643, 0, 0.9933948, 22.246193, 0.2148956, -65.51697)
+
+[node name="Tomb11" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.246193, 0.2148956, -62.4694)
+
+[node name="Tomb12" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9915516, -0.12971286, 0, 0.12971286, 0.9915516, 0, 0, 0, 1, 22.246193, 0.2148956, -59.018158)
+
+[node name="Tomb13" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.246193, 0.2148956, -55.7869)
+
+[node name="Tomb14" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9974831, 0, -0.07090551, 0, 1, 0, 0.07090551, 0, 0.9974831, 22.246193, 0.2148956, -51.41959)
+
+[node name="Tomb15" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.246193, 0.2148956, -42.82203)
+
+[node name="Tomb17" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.576286, 0.2148956, -42.82203)
+
+[node name="Tomb18" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.576286, 0.2148956, -47.054398)
+
+[node name="Tomb19" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.86150515, 0, -0.50774884, 0, 1, 0, 0.50774884, 0, 0.86150515, 18.576286, 0.2148956, -51.740936)
+
+[node name="Tomb20" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.576286, 0.2148956, -55.513523)
+
+[node name="Tomb21" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9873447, 0, -0.1585889, 0, 1, 0, 0.1585889, 0, 0.9873447, 18.576286, 0.2148956, -58.759243)
+
+[node name="Tomb22" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.576286, 0.2148956, -61.641113)
+
+[node name="Tomb23" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.576286, 0.2148956, -64.23616)
+
+[node name="Tomb24" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.98189926, 0, -0.18940392, 0, 1, 0, 0.18940392, 0, 0.98189926, 18.576286, 0.2148956, -67.10057)
+
+[node name="Tomb25" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9935995, 0, -0.112960435, 0, 1, 0, 0.112960435, 0, 0.9935995, 14.788239, 0.2148956, -67.10057)
+
+[node name="Tomb33" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9935995, 0, -0.112960435, 0, 1, 0, 0.112960435, 0, 0.9935995, 11.180138, 0.2148956, -67.10057)
+
+[node name="Tomb34" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9935995, 0, -0.112960435, 0, 1, 0, 0.112960435, 0, 0.9935995, 11.180138, 0.2148956, -63.112843)
+
+[node name="Tomb35" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9935995, 0, -0.112960435, 0, 1, 0, 0.112960435, 0, 0.9935995, 11.180138, 0.2148956, -60.162277)
+
+[node name="Tomb36" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9935995, 0, -0.112960435, 0, 1, 0, 0.112960435, 0, 0.9935995, 11.180138, 0.2148956, -57.599297)
+
+[node name="Tomb37" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9935995, 0, -0.112960435, 0, 1, 0, 0.112960435, 0, 0.9935995, 11.180138, 0.2148956, -54.433563)
+
+[node name="Tomb38" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9935995, 0, -0.112960435, 0, 1, 0, 0.112960435, 0, 0.9935995, 11.180138, 0.2148956, -50.446293)
+
+[node name="Tomb39" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9935995, 0, -0.112960435, 0, 1, 0, 0.112960435, 0, 0.9935995, 11.180138, 0.2148956, -47.02982)
+
+[node name="Tomb40" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9935995, 0, -0.112960435, 0, 1, 0, 0.112960435, 0, 0.9935995, 11.180138, 0.2148956, -42.975685)
+
+[node name="Tomb26" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.863096, 0, -0.5050399, 0, 1, 0, 0.5050399, 0, 0.863096, 14.788239, 0.2148956, -63.42024)
+
+[node name="Tomb27" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.99440634, 0, -0.105621934, 0, 1, 0, 0.105621934, 0, 0.99440634, 14.788239, 0.2148956, -61.00677)
+
+[node name="Tomb28" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.99345875, 0.1141916, 0, -0.1141916, 0.99345875, 0, 0, 0, 1, 14.788239, 0.2148956, -58.395332)
+
+[node name="Tomb29" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.788239, 0.2148956, -54.701427)
+
+[node name="Tomb30" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.788239, 0.2148956, -51.107)
+
+[node name="Tomb31" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.788239, 0.2148956, -46.815567)
+
+[node name="Tomb32" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9899325, 0, 0.14154053, 0, 1, 0, -0.14154053, 0, 0.9899325, 14.788239, 0.2148956, -42.78901)
+
+[node name="Tomb16" parent="." groups=["TheTomb"] instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.28219083, 0, 0.9593586, 0, 1, 0, -0.9593586, 0, 0.28219083, 22.246193, 0.2148956, -47.366596)
+
+[node name="Tomb2" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9985234, 0, -0.0543228, 0, 1, 0, 0.0543228, 0, 0.9985234, 27, 0.2148956, -46.15624)
+
+[node name="Tomb3" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.99993646, 0, -0.011274606, 0.0008665464, 0.99704206, 0.076853365, 0.011241256, -0.076858245, 0.9969787, 27, 0.1614281, -50.2947)
+
+[node name="Tomb4" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.9868004, 0.14517164, 0.07176557, -0.14334875, 0.98921883, -0.029957559, -0.07534085, 0.019274628, 0.99697167, 27, 0.14872873, -55.09188)

@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://dn72ebyirr3cg"]
+
+[ext_resource type="PackedScene" uid="uid://c837lb2ljn5rq" path="res://Models/Tomb.glb" id="1_b4knd"]
+[ext_resource type="Script" uid="uid://daayqc7unt5sw" path="res://Meshes/tomb.gd" id="2_ml1k5"]
+[ext_resource type="AudioStream" uid="uid://dv0byjpq1odrk" path="res://Sounds/digging-v1-27585.mp3" id="3_1vr6n"]
+[ext_resource type="PackedScene" uid="uid://d2oo7mbhjeha3" path="res://dirt.tscn" id="4_ocsmw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b4knd"]
+size = Vector3(2.156372, 20.965393, 1.980484)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ml1k5"]
+size = Vector3(1.2086754, 0.09550476, 1.154705)
+
+[node name="Tomb" instance=ExtResource("1_b4knd")]
+script = ExtResource("2_ml1k5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 0, 2.198225, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017712642, 7.531096, 0.013430948)
+shape = SubResource("BoxShape3D_b4knd")
+
+[node name="Plane" parent="." index="1"]
+transform = Transform3D(-2.7596867e-08, 0.42174304, 0, -0.6313427, -1.8434974e-08, 0, 0, 0, 0.42174304, 0.0375, 0.5169232, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" groups=["interactable"]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8402859, -0.12206097, -0.07350452)
+shape = SubResource("BoxShape3D_ml1k5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("3_1vr6n")
+
+[node name="dirt" parent="." index="5" instance=ExtResource("4_ocsmw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79, -0.22978747, 0)

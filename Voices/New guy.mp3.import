@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsgv88pe0gnt1"
+path="res://.godot/imported/New guy.mp3-b573b985cc7606ae748955cc5492fc86.mp3str"
+
+[deps]
+
+source_file="res://Voices/New guy.mp3"
+dest_files=["res://.godot/imported/New guy.mp3-b573b985cc7606ae748955cc5492fc86.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

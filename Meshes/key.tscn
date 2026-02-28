@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://tiwld8ub4oio"]
+
+[ext_resource type="PackedScene" uid="uid://dnc4m6j26qxp4" path="res://Models/key.glb" id="1_74a0t"]
+[ext_resource type="AudioStream" uid="uid://cesylx3o31mbw" path="res://Sounds/drop-coin-384921.mp3" id="2_tiohk"]
+[ext_resource type="Script" uid="uid://bttwgbx2vtxdp" path="res://Meshes/key.gd" id="2_yadw8"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yadw8"]
+height = 0.1
+radius = 0.7573242
+
+[node name="key" instance=ExtResource("1_74a0t")]
+script = ExtResource("2_yadw8")
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.5774712, 0.11267729, 0)
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22001612, 0)
+shape = SubResource("CylinderShape3D_yadw8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("2_tiohk")
+pitch_scale = 0.7
+
+[node name="key" parent="." index="3" instance=ExtResource("1_74a0t")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.215, 0.193851, -0.065)

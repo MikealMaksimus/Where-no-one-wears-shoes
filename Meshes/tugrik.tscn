@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://vayvxqxw0i5o"]
+
+[ext_resource type="PackedScene" uid="uid://coivbqdc3dons" path="res://Models/Tugrik.glb" id="1_smgiu"]
+[ext_resource type="Script" uid="uid://rpnetnk7oodl" path="res://tugrik.gd" id="2_gha4u"]
+[ext_resource type="AudioStream" uid="uid://cesylx3o31mbw" path="res://Sounds/drop-coin-384921.mp3" id="3_gha4u"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jas54"]
+height = 0.1
+radius = 0.35302734
+
+[node name="Tugrik" instance=ExtResource("1_smgiu")]
+script = ExtResource("2_gha4u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.1552734e-05, 0)
+shape = SubResource("CylinderShape3D_jas54")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_gha4u")

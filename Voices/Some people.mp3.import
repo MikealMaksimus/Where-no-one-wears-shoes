@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://e3md30thnuu1"
+path="res://.godot/imported/Some people.mp3-2372463aee2eb0f856307ff1df6d8c4f.mp3str"
+
+[deps]
+
+source_file="res://Voices/Some people.mp3"
+dest_files=["res://.godot/imported/Some people.mp3-2372463aee2eb0f856307ff1df6d8c4f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

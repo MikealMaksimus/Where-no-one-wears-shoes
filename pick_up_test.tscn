@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnadv0olh12h3"]
+
+[ext_resource type="Script" uid="uid://dxgqgq52rdo1m" path="res://pick_up_test.gd" id="1_h7t1f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7t1f"]
+use_z_clip_scale = true
+z_clip_scale = 0.88
+use_fov_override = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_5p4sm"]
+material = SubResource("StandardMaterial3D_h7t1f")
+size = Vector3(0.3, 1, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5p4sm"]
+size = Vector3(0.3, 1, 0.3)
+
+[node name="PickUpTest" type="RigidBody3D" groups=["pickable"]]
+script = ExtResource("1_h7t1f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_5p4sm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["pickable"]]
+shape = SubResource("BoxShape3D_5p4sm")

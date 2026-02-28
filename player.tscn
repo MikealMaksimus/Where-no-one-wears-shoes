@@ -1,0 +1,97 @@
+[gd_scene load_steps=15 format=3 uid="uid://c2xxqua73hahv"]
+
+[ext_resource type="Script" uid="uid://bfvhlxvv5ndnr" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bohp786jnhim7" path="res://head.gd" id="2_1jxqw"]
+[ext_resource type="AudioStream" uid="uid://7ipri4skhvjt" path="res://Sounds/Footstep1.mp3" id="2_i3pqv"]
+[ext_resource type="AudioStream" uid="uid://3yg15dqke25f" path="res://Sounds/Footstep2.mp3" id="3_hqtel"]
+[ext_resource type="AudioStream" uid="uid://cqmkgct84hxbx" path="res://Sounds/CranckingMyWood.mp3" id="3_n7ghd"]
+[ext_resource type="AudioStream" uid="uid://cv07ax0030yb1" path="res://Sounds/Footstep3.mp3" id="4_hqtel"]
+[ext_resource type="AudioStream" uid="uid://dn8s2g3ftcxki" path="res://Sounds/CobleStep1.mp3" id="5_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://ccmdjeexss0b1" path="res://Sounds/Cobble3.mp3" id="6_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://8xk82e8mfndo" path="res://Sounds/wind-blowing-sfx-07-423677.mp3" id="8_dw050"]
+[ext_resource type="AudioStream" uid="uid://42cgjdypiq87" path="res://Sounds/CinematicGroundSlammer.mp3" id="9_b26j0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
+radius = 0.2
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_onrkg"]
+radius = 0.2
+height = 1.8
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_sweqy"]
+playback_mode = 2
+random_pitch = 1.1
+streams_count = 3
+stream_0/stream = ExtResource("2_i3pqv")
+stream_1/stream = ExtResource("3_hqtel")
+stream_2/stream = ExtResource("4_hqtel")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dw050"]
+playback_mode = 2
+random_pitch = 1.1
+streams_count = 2
+stream_0/stream = ExtResource("5_2hs0m")
+stream_1/stream = ExtResource("6_2hs0m")
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+collision_layer = 4
+floor_block_on_wall = false
+floor_snap_length = 0.01
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_4flbx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_onrkg")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("2_1jxqw")
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+near = 0.01
+
+[node name="RayCast3D2" type="RayCast3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19099998, -0.54002106)
+target_position = Vector3(0, 0, -2.2)
+collision_mask = 3
+hit_from_inside = true
+
+[node name="Hand" type="Node3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.705, -0.302, -0.768)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Head"]
+
+[node name="E" type="Label" parent="Head/CanvasLayer"]
+offset_left = 331.0
+offset_top = 179.0
+offset_right = 371.0
+offset_bottom = 202.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Interact"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Head"]
+stream = ExtResource("3_n7ghd")
+pitch_scale = 0.9
+
+[node name="Grass" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_sweqy")
+
+[node name="Coble" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_dw050")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, -0.5, 0)
+hit_from_inside = true
+
+[node name="Blower" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_dw050")
+
+[node name="GroundSlammer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_b26j0")
