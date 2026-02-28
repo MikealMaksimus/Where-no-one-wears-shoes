@@ -394,7 +394,7 @@ shape = SubResource("BoxShape3D_26xuy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.21, 0, 0)
 
 [node name="Masela" parent="Plane" instance=ExtResource("23_il2jm")]
-transform = Transform3D(-0.9924116, 0, -0.1229606, 0, 1, 0, 0.1229606, 0, -0.9924116, -63.864, 1.55, -49.539)
+transform = Transform3D(-0.9924116, 0, -0.1229606, 0.0033560323, 0.9996275, -0.027086444, 0.12291479, -0.02729356, -0.9920419, -8.156, 0.946, 31.908)
 
 [node name="Ground" parent="Plane" instance=ExtResource("22_il2jm")]
 
@@ -494,6 +494,7 @@ shape = SubResource("ConcavePolygonShape3D_ic0uy")
 [connection signal="poor" from="Player" to="Plane/Masela" method="_on_player_poor"]
 [connection signal="timeout" from="Cycler" to="." method="_on_cycler_timeout"]
 [connection signal="timeout" from="Cycler" to="Plane/Miluu" method="_on_cycler_timeout"]
+[connection signal="timeout" from="Cycler" to="Plane/Masela" method="_on_cycler_timeout"]
 [connection signal="body_entered" from="Plane/Water/Area3D" to="Plane/Water" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Plane/Water/Area3D" to="Plane/Water" method="_on_area_3d_body_exited"]
 [connection signal="body_entered" from="Plane/Water2/Area3D" to="Plane/Water2" method="_on_area_3d_body_entered"]

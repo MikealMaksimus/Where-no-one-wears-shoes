@@ -1,5 +1,7 @@
 extends Node3D
 
+var shop := Vector3(-63.864, 1.55, -49.539)
+var chilling = Vector3(-8.156, 0.946, 31.908)
 
 func interact():
 	$AudioStreamPlayer3D.play()
@@ -16,3 +18,12 @@ func _on_player_bought() -> void:
 
 func _on_player_poor() -> void:
 	$Poor.play()
+
+
+func _on_cycler_timeout() -> void:
+	if Info.day == 1:
+		position = shop
+	elif Info.time == "dawn":
+		position = shop
+	else:
+		position = shop
