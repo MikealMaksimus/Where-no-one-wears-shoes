@@ -3,7 +3,7 @@ extends Node
 var playerPos := Vector3(0, 0, 0)
 var cycling := false
 var NewDay := false
-var day := 6
+var day := 1
 var time := "dusk"
 var unfreeze := 1.0
 var money := 0

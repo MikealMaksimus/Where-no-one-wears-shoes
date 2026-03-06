@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Info.time == "day" or "dusk": #vaan day
+	if Info.time == "day": #vaan day
 		$Door_001/StaticBody3D/CollisionShape3D.disabled = true
 		hide()
 	else:

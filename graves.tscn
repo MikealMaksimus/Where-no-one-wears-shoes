@@ -113,7 +113,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.788239, 0.2148956, -46.815
 transform = Transform3D(0.9899325, 0, 0.14154053, 0, 1, 0, -0.14154053, 0, 0.9899325, 14.788239, 0.2148956, -42.78901)
 
 [node name="Tomb16" parent="." groups=["TheTomb"] instance=ExtResource("1_ripkk")]
-transform = Transform3D(0.28219083, 0, 0.9593586, 0, 1, 0, -0.9593586, 0, 0.28219083, 22.246193, 0.2148956, -47.366596)
+transform = Transform3D(-0.11150369, 0, 0.9937642, 0, 1, 0, -0.9937642, 0, -0.11150369, 22.246193, 0.2148956, -47.366596)
 
 [node name="Tomb2" parent="." instance=ExtResource("1_ripkk")]
 transform = Transform3D(0.9985234, 0, -0.0543228, 0, 1, 0, 0.0543228, 0, 0.9985234, 27, 0.2148956, -46.15624)

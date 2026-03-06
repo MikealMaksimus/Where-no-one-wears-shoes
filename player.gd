@@ -113,6 +113,8 @@ func walkSound():
 			$Grass.play()
 		elif $RayCast3D.get_collider().is_in_group("cobble"):
 			$Coble.play()
+		elif $RayCast3D.get_collider().is_in_group("wood"):
+			$Wood.play()
 
 func repulse(delta):
 	var target_force: Vector3 = Vector3.ZERO

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvrfjwt8l477n"
+path="res://.godot/imported/He was.mp3-c48b14909d38442c659d685e7a033c99.mp3str"
+
+[deps]
+
+source_file="res://Voices/He was.mp3"
+dest_files=["res://.godot/imported/He was.mp3-c48b14909d38442c659d685e7a033c99.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

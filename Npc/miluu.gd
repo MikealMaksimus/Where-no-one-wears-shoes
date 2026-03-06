@@ -21,6 +21,8 @@ func interact():
 func move():
 	if Info.day == 2 and not Info.time == "dawn":
 		position = Vector3(66.68, 0.823, -66.352)
+	elif Info.time == "night" or Info.day >= 3:
+		queue_free()
 
 
 func _on_audio_stream_player_3d_finished() -> void:
@@ -36,4 +38,8 @@ func line():
 
 
 func _on_cycler_timeout() -> void:
+	move()
+
+
+func _on_world_dawned() -> void:
 	move()

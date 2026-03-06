@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c2xxqua73hahv"]
+[gd_scene load_steps=18 format=3 uid="uid://c2xxqua73hahv"]
 
 [ext_resource type="Script" uid="uid://bfvhlxvv5ndnr" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://bohp786jnhim7" path="res://head.gd" id="2_1jxqw"]
@@ -8,7 +8,9 @@
 [ext_resource type="AudioStream" uid="uid://cv07ax0030yb1" path="res://Sounds/Footstep3.mp3" id="4_hqtel"]
 [ext_resource type="AudioStream" uid="uid://dn8s2g3ftcxki" path="res://Sounds/CobleStep1.mp3" id="5_2hs0m"]
 [ext_resource type="AudioStream" uid="uid://ccmdjeexss0b1" path="res://Sounds/Cobble3.mp3" id="6_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://ixgimqbvexry" path="res://Sounds/Wood1.mp3" id="7_n7ghd"]
 [ext_resource type="AudioStream" uid="uid://8xk82e8mfndo" path="res://Sounds/wind-blowing-sfx-07-423677.mp3" id="8_dw050"]
+[ext_resource type="AudioStream" uid="uid://caa2ryud7b40l" path="res://Sounds/Wood2.mp3" id="8_nvl01"]
 [ext_resource type="AudioStream" uid="uid://42cgjdypiq87" path="res://Sounds/CinematicGroundSlammer.mp3" id="9_b26j0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
@@ -27,12 +29,18 @@ stream_0/stream = ExtResource("2_i3pqv")
 stream_1/stream = ExtResource("3_hqtel")
 stream_2/stream = ExtResource("4_hqtel")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_urp6f"]
+random_pitch = 1.1
+streams_count = 2
+stream_0/stream = ExtResource("6_2hs0m")
+stream_1/stream = ExtResource("5_2hs0m")
+
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dw050"]
 playback_mode = 2
 random_pitch = 1.1
 streams_count = 2
-stream_0/stream = ExtResource("5_2hs0m")
-stream_1/stream = ExtResource("6_2hs0m")
+stream_0/stream = ExtResource("7_n7ghd")
+stream_1/stream = ExtResource("8_nvl01")
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 collision_layer = 4
@@ -60,7 +68,6 @@ near = 0.01
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19099998, -0.54002106)
 target_position = Vector3(0, 0, -2.2)
 collision_mask = 3
-hit_from_inside = true
 
 [node name="Hand" type="Node3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.705, -0.302, -0.768)
@@ -84,9 +91,13 @@ pitch_scale = 0.9
 stream = SubResource("AudioStreamRandomizer_sweqy")
 
 [node name="Coble" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_urp6f")
+
+[node name="Wood" type="AudioStreamPlayer3D" parent="."]
 stream = SubResource("AudioStreamRandomizer_dw050")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108487576, 0)
 target_position = Vector3(0, -0.5, 0)
 hit_from_inside = true
 

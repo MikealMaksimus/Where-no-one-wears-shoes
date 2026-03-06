@@ -220,6 +220,10 @@ material = SubResource("ShaderMaterial_xo7kj")
 offset_right = 640.0
 offset_bottom = 360.0
 
+[node name="CoolD" type="Timer" parent="." index="12"]
+wait_time = 6.0
+one_shot = true
+
 [connection signal="body_entered" from="inside" to="." method="_on_inside_body_entered"]
 [connection signal="body_exited" from="inside" to="." method="_on_inside_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

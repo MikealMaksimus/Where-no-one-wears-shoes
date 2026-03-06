@@ -7,6 +7,8 @@ var day := preload("res://Tres/Day.tres")
 var dawn := preload("res://Tres/Dawn.tres")
 var dusk := preload("res://Tres/Dusk.tres")
 
+signal dawned
+
 func _ready() -> void:
 	$WorldEnvironment.environment = dusk
 	$DirectionalLight3D.light_energy = 1
@@ -14,9 +16,9 @@ func _ready() -> void:
 
 func  _process(_delta: float) -> void:
 	if Info.NewDay:
-		dawner()
 		Info.NewDay = false
 		Info.day += 1
+		dawner()
 		$Cycler.wait_time = 150 - Info.day * 10
 
 func _on_cycler_timeout() -> void:
@@ -53,6 +55,7 @@ func nighter():
 
 func dawner():
 	Info.time = "dawn"
+	emit_signal("dawned")
 	$Cycler.start()
 	$WorldEnvironment.environment = dawn
 	$DirectionalLight3D.light_energy = 0.5
