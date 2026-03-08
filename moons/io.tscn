@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0whdloacri4w"]
+
+[ext_resource type="PackedScene" uid="uid://dpjg3vrhupnb5" path="res://Models/io.glb" id="1_hq3kv"]
+[ext_resource type="Script" uid="uid://cn536j8ystk4u" path="res://moons/moon.gd" id="2_vl7eq"]
+[ext_resource type="AudioStream" uid="uid://tr8as5xdi1os" path="res://Npc/dragon-studio-creepy-ghost-whisper-401712.mp3" id="3_phonb"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vl7eq"]
+radius = 0.60448813
+
+[node name="io" instance=ExtResource("1_hq3kv")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+script = ExtResource("2_vl7eq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.1552734e-05, 0)
+shape = SubResource("SphereShape3D_vl7eq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_phonb")

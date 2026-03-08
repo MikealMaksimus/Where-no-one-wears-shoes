@@ -2,7 +2,7 @@ extends Node3D
 
 var one := preload("res://Voices/New guy.mp3")
 var two := preload("res://Voices/These nights.mp3")
-var three := preload("res://Voices/These nights.mp3")
+var three := preload("res://Voices/Miluu finale.mp3")
 
 func _ready() -> void:
 	position = Vector3(-28.15, 1.453, -20)
@@ -33,15 +33,18 @@ func _on_audio_stream_player_3d_finished() -> void:
 func line():
 	if Info.day == 2 and Info.time == "dawn":
 		$AudioStreamPlayer3D.stream = two
+		print("b")
 	elif Info.day == 2:
 		$AudioStreamPlayer.stream = three
+		Info.money += 2
+		print("a")
 	else:
+		print(Info.day)
 		$AudioStreamPlayer3D.stream = one
 
 
 func _on_cycler_timeout() -> void:
 	move()
-	print("b")
 
 
 func _on_world_dawned() -> void:

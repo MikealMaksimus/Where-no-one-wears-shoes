@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xejw4nswcupm"
+path="res://.godot/imported/Miluu finale.mp3-5ce6af675375babbeaf032af865b142e.mp3str"
+
+[deps]
+
+source_file="res://Voices/Miluu finale.mp3"
+dest_files=["res://.godot/imported/Miluu finale.mp3-5ce6af675375babbeaf032af865b142e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

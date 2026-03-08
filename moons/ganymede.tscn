@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://pcggdpbiumlr"]
+
+[ext_resource type="PackedScene" uid="uid://bqx4tlo2o7oc6" path="res://Models/ganymede.glb" id="1_pl65e"]
+[ext_resource type="Script" uid="uid://cn536j8ystk4u" path="res://moons/moon.gd" id="2_uin36"]
+[ext_resource type="AudioStream" uid="uid://tr8as5xdi1os" path="res://Npc/dragon-studio-creepy-ghost-whisper-401712.mp3" id="3_r3s1m"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_uin36"]
+radius = 0.5955769
+
+[node name="ganymede" instance=ExtResource("1_pl65e")]
+script = ExtResource("2_uin36")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.1552734e-05, 0)
+shape = SubResource("SphereShape3D_uin36")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_r3s1m")

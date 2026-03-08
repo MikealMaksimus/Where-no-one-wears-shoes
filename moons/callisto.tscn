@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bygwxhvn2rqku"]
+
+[ext_resource type="PackedScene" uid="uid://b3j2qfxg0477v" path="res://Models/calisto.glb" id="1_4rk4h"]
+[ext_resource type="Script" uid="uid://cn536j8ystk4u" path="res://moons/moon.gd" id="2_awhnt"]
+[ext_resource type="AudioStream" uid="uid://tr8as5xdi1os" path="res://Npc/dragon-studio-creepy-ghost-whisper-401712.mp3" id="3_cu32k"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4rk4h"]
+radius = 0.54864174
+
+[node name="callisto" instance=ExtResource("1_4rk4h")]
+script = ExtResource("2_awhnt")
+
+[node name="Roundcube" parent="." index="0"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.1552734e-05, 0)
+shape = SubResource("SphereShape3D_4rk4h")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_cu32k")
+stream_paused = true

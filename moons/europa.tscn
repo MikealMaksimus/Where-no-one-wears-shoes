@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4p0ij1woh306"]
+
+[ext_resource type="PackedScene" uid="uid://c2eblvl83cqpd" path="res://Models/europa.glb" id="1_n6gch"]
+[ext_resource type="Script" uid="uid://cn536j8ystk4u" path="res://moons/moon.gd" id="2_8tvd7"]
+[ext_resource type="AudioStream" uid="uid://tr8as5xdi1os" path="res://Npc/dragon-studio-creepy-ghost-whisper-401712.mp3" id="3_d344h"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8tvd7"]
+radius = 0.5941021
+
+[node name="europa" instance=ExtResource("1_n6gch")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("2_8tvd7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.1552734e-05, 0)
+shape = SubResource("SphereShape3D_8tvd7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_d344h")
