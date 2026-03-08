@@ -12,4 +12,4 @@ var dig := false
 var repel := false
 var repelPoint := Vector3(0, 0, 0)
 
-var speed := 5
+var speed := 50

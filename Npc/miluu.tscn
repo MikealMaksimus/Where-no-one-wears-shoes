@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://7sio78jb3kmy"]
+[gd_scene load_steps=6 format=3 uid="uid://7sio78jb3kmy"]
 
 [ext_resource type="PackedScene" uid="uid://h7n1nfg1qxjh" path="res://Models/Miluu3.glb" id="1_8vtyh"]
 [ext_resource type="Script" uid="uid://csnva2xi11av3" path="res://Npc/miluu.gd" id="2_2ot52"]
 [ext_resource type="AudioStream" uid="uid://dsgv88pe0gnt1" path="res://Voices/New guy.mp3" id="3_2ot52"]
+[ext_resource type="PackedScene" uid="uid://cl46drwx1fa4k" path="res://Models/Shovel.glb" id="4_3y4oo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8vtyh"]
 size = Vector3(0.6248169, 1.9227295, 0.44177246)
@@ -18,5 +19,8 @@ shape = SubResource("BoxShape3D_8vtyh")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="6"]
 stream = ExtResource("3_2ot52")
+
+[node name="Shovel" parent="." index="7" instance=ExtResource("4_3y4oo")]
+transform = Transform3D(-0.41165152, -0.2752957, 0.0689595, -0.04470462, -0.0570756, -0.49471617, 0.28025806, -0.41346675, 0.02237654, -0.25335267, -0.31922573, -0.01666081)
 
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

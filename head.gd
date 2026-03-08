@@ -8,7 +8,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	
 	var object = $Camera3D/RayCast3D2.get_collider()
-	
+	spaghethos()
 	#extreme spagethi
 	if not object == null:
 		if object.is_in_group("buyable"):
@@ -24,6 +24,7 @@ func _process(_delta: float) -> void:
 			$CanvasLayer/E.hide()
 	else:
 		$CanvasLayer/E.hide()
+		return
 	
 	if $Camera3D/RayCast3D2.is_colliding() and object.is_in_group("buyable") and Input.is_action_just_pressed("interact"):
 		if object.price <= Info.money:
@@ -47,6 +48,7 @@ func _process(_delta: float) -> void:
 	elif $Camera3D/RayCast3D2.is_colliding() and object.is_in_group("consumable") and Input.is_action_just_pressed("interact") and object.price <= Info.money:
 		object.consume()
 	
+func spaghethos():
 	if not held == null:
 		held.global_position = $Hand.global_position
 		held.global_rotation_degrees = $Hand.global_rotation_degrees

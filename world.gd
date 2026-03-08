@@ -9,12 +9,19 @@ var dusk := preload("res://Tres/Dusk.tres")
 
 signal dawned
 
+var shopping := false
+
 func _ready() -> void:
 	$WorldEnvironment.environment = dusk
 	$DirectionalLight3D.light_energy = 1
 	$DirectionalLight3D.rotation_degrees.x = -15.0
 
 func  _process(_delta: float) -> void:
+	
+	if Input.is_action_just_pressed("skip"):
+		$Cycler.wait_time = 7
+		$Cycler.start()
+	
 	if Info.NewDay:
 		Info.NewDay = false
 		Info.day += 1
@@ -38,6 +45,9 @@ func dusker():
 	$DirectionalLight3D.light_energy = 1
 	$Cycled.dusk()
 	$DirectionalLight3D.rotation_degrees.x = -15.0
+	
+	if shopping:
+		$Player.global_position = $Plane/Marker3D.global_position
 
 func dayer():
 	Info.time = "day"
@@ -75,3 +85,13 @@ func fall():
 
 func spaghatiBologens():
 	$Player.durability()
+
+
+func _on_shop_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		shopping = true
+
+
+func _on_shop_body_exited(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		shopping = false

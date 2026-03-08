@@ -8,6 +8,9 @@ var atShop := preload("res://Voices/Hello my friend.mp3")
 var morningWood := preload("res://Voices/When the sun is high.mp3")
 var fried := preload("res://Voices/He was.mp3")
 
+func _ready() -> void:
+	move()
+
 func interact():
 	$AudioStreamPlayer3D.play()
 	$StaticBody3D.remove_from_group("interactable")

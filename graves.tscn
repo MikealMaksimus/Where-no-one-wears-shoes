@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://do04sy2o6fvia"]
+[gd_scene load_steps=4 format=3 uid="uid://do04sy2o6fvia"]
 
+[ext_resource type="Script" uid="uid://d2p1g03by7wus" path="res://graves.gd" id="1_1hgt0"]
 [ext_resource type="PackedScene" uid="uid://dn72ebyirr3cg" path="res://Meshes/tomb.tscn" id="1_ripkk"]
+[ext_resource type="PackedScene" uid="uid://c3oy4b7btay33" path="res://Models/dirt.glb" id="3_ughej"]
 
 [node name="Graves" type="Node3D"]
+script = ExtResource("1_1hgt0")
+
+[node name="dirt2" parent="." instance=ExtResource("3_ughej")]
+transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, 7.31, 0.01, -67.101)
+
+[node name="Tomb41" parent="." instance=ExtResource("1_ripkk")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 8.349383, 0.2148956, -67.10057)
 
 [node name="Tomb" parent="." instance=ExtResource("1_ripkk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0.2148956, -42)
