@@ -33,21 +33,19 @@ func _process(_delta: float) -> void:
 			get_parent().emit_signal("poor")
 	
 	if $Camera3D/RayCast3D2.is_colliding() and object.is_in_group("pickable") and Input.is_action_just_pressed("interact") and object.price <= Info.money:
-
 			held = object
 			held.shadow = false
 			if object.is_in_group("buyable"): #The holy nest
 				object.remove_from_group("buyable")
 				Info.money -= object.price
 				object.price = 0
-
 	
 	elif $Camera3D/RayCast3D2.is_colliding() and object.is_in_group("interactable") and Input.is_action_just_pressed("interact"):
 		object.get_parent().interact()
 		
 	elif $Camera3D/RayCast3D2.is_colliding() and object.is_in_group("consumable") and Input.is_action_just_pressed("interact") and object.price <= Info.money:
 		object.consume()
-	
+
 func spaghethos():
 	if not held == null:
 		held.global_position = $Hand.global_position
