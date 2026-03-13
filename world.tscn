@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://c5ph8vafspiow"]
+[gd_scene load_steps=60 format=3 uid="uid://c5ph8vafspiow"]
 
 [ext_resource type="PackedScene" uid="uid://c2xxqua73hahv" path="res://player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://ckoyh7u5ej1uu" path="res://vhs.tscn" id="1_pkg7o"]
@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://7sio78jb3kmy" path="res://Npc/miluu.tscn" id="18_cbp6q"]
 [ext_resource type="AudioStream" uid="uid://deoiuwl10dtyn" path="res://Voices/Come inside.mp3" id="18_wukud"]
 [ext_resource type="PackedScene" uid="uid://ckposy1b6rtii" path="res://Meshes/sign_1_0.tscn" id="20_26xuy"]
-[ext_resource type="PackedScene" uid="uid://bqx4tlo2o7oc6" path="res://Models/ganymede.glb" id="20_ryup7"]
+[ext_resource type="PackedScene" uid="uid://pcggdpbiumlr" path="res://moons/ganymede.tscn" id="20_ytpkv"]
 [ext_resource type="PackedScene" uid="uid://bg3ubu6av3ka7" path="res://Meshes/capsule_1_2.tscn" id="21_wukud"]
 [ext_resource type="PackedScene" uid="uid://qwat3ko3e7hs" path="res://Meshes/ground.tscn" id="22_il2jm"]
 [ext_resource type="PackedScene" uid="uid://do04sy2o6fvia" path="res://graves.tscn" id="22_wukud"]
@@ -41,6 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://b4p0ij1woh306" path="res://moons/europa.tscn" id="36_ryup7"]
 [ext_resource type="PackedScene" uid="uid://c0whdloacri4w" path="res://moons/io.tscn" id="40_7htu6"]
 [ext_resource type="PackedScene" uid="uid://vy5f2hs16tmd" path="res://Npc/kolli.tscn" id="41_ytpkv"]
+[ext_resource type="PackedScene" uid="uid://bvxoskco167pl" path="res://Npc/guard.tscn" id="42_jas3d"]
 
 [sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_ikiii"]
 
@@ -385,7 +386,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.606003, 0.626, -20.455)
 [node name="Poyta2" parent="Plane" instance=ExtResource("14_70uel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.84025, 0.626, 91.94708)
 
-[node name="ganymede" parent="Plane/Poyta2" instance=ExtResource("20_ryup7")]
+[node name="ganymede2" parent="Plane/Poyta2" instance=ExtResource("20_ytpkv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5882716, 0)
 
 [node name="capsule1_2" parent="Plane" instance=ExtResource("21_wukud")]
@@ -537,6 +538,9 @@ collision_mask = 5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D2/Water2/Area3D"]
 shape = SubResource("ConcavePolygonShape3D_ic0uy")
+
+[node name="guard" parent="." instance=ExtResource("42_jas3d")]
+transform = Transform3D(-0.020767927, 0, -0.99978423, 0, 1, 0, 0.99978423, 0, -0.020767927, -94.72614, 1.3317957, 94.571884)
 
 [connection signal="dawned" from="." to="Plane/Miluu" method="_on_world_dawned"]
 [connection signal="dawned" from="." to="Plane/Masela" method="_on_world_dawned"]

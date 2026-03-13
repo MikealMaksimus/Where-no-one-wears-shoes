@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvxoskco167pl"]
+
+[ext_resource type="PackedScene" uid="uid://dpch0dmyn3uan" path="res://Models/guard.glb" id="1_n0pjj"]
+[ext_resource type="Script" uid="uid://6mc7c8wolje0" path="res://guard.gd" id="2_32mos"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crmx1"]
+size = Vector3(1.0753059, 2.3669395, 0.4814682)
+
+[node name="guard" instance=ExtResource("1_n0pjj")]
+script = ExtResource("2_32mos")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" groups=["interactable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12580153, -0.022438735, -0.027207121)
+shape = SubResource("BoxShape3D_crmx1")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="3"]
