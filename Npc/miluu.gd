@@ -33,13 +33,10 @@ func _on_audio_stream_player_3d_finished() -> void:
 func line():
 	if Info.day == 2 and Info.time == "dawn":
 		$AudioStreamPlayer3D.stream = two
-		print("b")
 	elif Info.day == 2:
 		$AudioStreamPlayer.stream = three
 		Info.money += 2
-		print("a")
 	else:
-		print(Info.day)
 		$AudioStreamPlayer3D.stream = one
 
 

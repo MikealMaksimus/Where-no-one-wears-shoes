@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boc1ud34bw1hh"
+path="res://.godot/imported/heyy youu.mp3-f940621ef9c5a07b82265c2c9d904f07.mp3str"
+
+[deps]
+
+source_file="res://Voices/heyy youu.mp3"
+dest_files=["res://.godot/imported/heyy youu.mp3-f940621ef9c5a07b82265c2c9d904f07.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
