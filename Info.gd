@@ -13,4 +13,7 @@ var dig := false
 var repel := false
 var repelPoint := Vector3(0, 0, 0)
 
+var immortality := false 
+var opend := false
+
 var speed := 25

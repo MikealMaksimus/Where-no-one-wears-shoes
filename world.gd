@@ -12,6 +12,13 @@ signal dawned
 var shopping := false
 
 func _ready() -> void:
+	Goster.load_game()
+	if Info.opend:
+		print("close")
+	else:
+		print("open")
+		Goster.open(true)
+	
 	$WorldEnvironment.environment = dusk
 	$DirectionalLight3D.light_energy = 1
 	$DirectionalLight3D.rotation_degrees.x = -15.0
