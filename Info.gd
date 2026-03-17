@@ -16,4 +16,4 @@ var repelPoint := Vector3(0, 0, 0)
 var immortality := false 
 var opend := false
 
-var speed := 25
+var speed := 25.0 #56

@@ -3,6 +3,9 @@ extends Node3D
 var one := preload("res://Voices/New guy.mp3")
 var two := preload("res://Voices/These nights.mp3")
 var three := preload("res://Voices/Miluu finale.mp3")
+var sleep := preload("res://Voices/I can sleep.mp3")
+
+var second = false
 
 func _ready() -> void:
 	position = Vector3(-28.15, 1.453, -20)
@@ -36,8 +39,11 @@ func line():
 	elif Info.day == 2:
 		$AudioStreamPlayer.stream = three
 		Info.money += 2
+	elif second:
+		$AudioStreamPlayer3D.stream = sleep
 	else:
 		$AudioStreamPlayer3D.stream = one
+		second = true
 
 
 func _on_cycler_timeout() -> void:

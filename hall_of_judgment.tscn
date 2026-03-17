@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://bchye1jffxaf2"]
+[gd_scene load_steps=19 format=3 uid="uid://bchye1jffxaf2"]
 
 [ext_resource type="PackedScene" uid="uid://c2xxqua73hahv" path="res://player.tscn" id="1_54gn2"]
 [ext_resource type="Script" uid="uid://bistkx0ls76cw" path="res://hall_of_judgment.gd" id="1_bak5m"]
 [ext_resource type="PackedScene" uid="uid://fgi4gyq8j7us" path="res://Meshes/poyta.tscn" id="2_oxqgh"]
 [ext_resource type="PackedScene" uid="uid://cq22yuxpc7qv8" path="res://Meshes/chair.tscn" id="3_mfbxv"]
 [ext_resource type="AudioStream" uid="uid://deoiuwl10dtyn" path="res://Voices/Come inside.mp3" id="4_lnf0n"]
+[ext_resource type="AudioStream" uid="uid://dirvkvbh8eorb" path="res://Sounds/qrospiChantIntro.mp3" id="6_32bma"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxqgh"]
 
@@ -114,3 +115,9 @@ skeleton = NodePath("../Player")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_bak5m")
+
+[node name="chanter" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_32bma")
+autoplay = true
+
+[connection signal="finished" from="chanter" to="." method="_on_audio_stream_player_finished"]

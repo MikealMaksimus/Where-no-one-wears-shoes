@@ -220,7 +220,7 @@ size = Vector3(6.985, 0.2, 0.5)
 data = PackedVector3Array(-3.4924998, 0.099999994, 0.25, 3.4924998, 0.099999994, 0.25, -3.4924998, -0.099999994, 0.25, 3.4924998, 0.099999994, 0.25, 3.4924998, -0.099999994, 0.25, -3.4924998, -0.099999994, 0.25, 3.4924998, 0.099999994, -0.25, -3.4924998, 0.099999994, -0.25, 3.4924998, -0.099999994, -0.25, -3.4924998, 0.099999994, -0.25, -3.4924998, -0.099999994, -0.25, 3.4924998, -0.099999994, -0.25, 3.4924998, 0.099999994, 0.25, 3.4924998, 0.099999994, -0.25, 3.4924998, -0.099999994, 0.25, 3.4924998, 0.099999994, -0.25, 3.4924998, -0.099999994, -0.25, 3.4924998, -0.099999994, 0.25, -3.4924998, 0.099999994, -0.25, -3.4924998, 0.099999994, 0.25, -3.4924998, -0.099999994, -0.25, -3.4924998, 0.099999994, 0.25, -3.4924998, -0.099999994, 0.25, -3.4924998, -0.099999994, -0.25, 3.4924998, 0.099999994, 0.25, -3.4924998, 0.099999994, 0.25, 3.4924998, 0.099999994, -0.25, -3.4924998, 0.099999994, 0.25, -3.4924998, 0.099999994, -0.25, 3.4924998, 0.099999994, -0.25, -3.4924998, -0.099999994, 0.25, 3.4924998, -0.099999994, 0.25, -3.4924998, -0.099999994, -0.25, 3.4924998, -0.099999994, 0.25, 3.4924998, -0.099999994, -0.25, -3.4924998, -0.099999994, -0.25)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g1i3r"]
-size = Vector3(11.697601, 5.0805054, 15.711319)
+size = Vector3(15.706223, 6.856529, 12.750283)
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_udxuc")
@@ -390,6 +390,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.84025, 0.626, 91.94708)
 [node name="ganymede2" parent="Plane/Poyta2" instance=ExtResource("20_ytpkv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5882716, 0)
 
+[node name="Tugrik" parent="Plane/Poyta2/ganymede2" instance=ExtResource("5_bh8nc")]
+transform = Transform3D(1, 0, 0, 0, 0.9942205, 0.10735734, 0, -0.10735734, 0.9942205, -4.7112846, -1.5776113, -2.8454132)
+
 [node name="capsule1_2" parent="Plane" instance=ExtResource("21_wukud")]
 transform = Transform3D(-0.96976984, 0, 0.24402145, 0, 1, 0, -0.24402145, 0, -0.96976984, -34.092102, 1.7296591, -14.1476145)
 
@@ -407,6 +410,9 @@ shape = SubResource("BoxShape3D_26xuy")
 
 [node name="Graves" parent="Plane" instance=ExtResource("22_wukud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.21, 0, 0)
+
+[node name="Tugrik5" parent="Plane" instance=ExtResource("5_bh8nc")]
+transform = Transform3D(0.61566144, 0, 0.7880109, 0, 1, 0, -0.7880106, 0, 0.6156616, 44.145885, 1.6914847, 63.22251)
 
 [node name="Poyta3" parent="Plane" instance=ExtResource("14_70uel")]
 transform = Transform3D(0.61566144, 0, 0.7880109, 0, 1.0000001, 0, -0.7880106, 0, 0.6156616, 44.145885, 0.61929405, 64.46153)
@@ -489,8 +495,19 @@ transform = Transform3D(0.7241258, -0.68922627, 0.024677651, 0.5, 0.50000006, -0
 [node name="LockedDoor" parent="Plane" instance=ExtResource("34_w44yn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.08013, 0.56755495, 59.440285)
 
+[node name="Tugrik6" parent="Plane" instance=ExtResource("5_bh8nc")]
+transform = Transform3D(0.0012566745, 0, -0.9999992, 0, 1, 0, 0.9999992, 0, 0.0012566745, 79.85839, 0.8069129, -86.992)
+
 [node name="TheChurch" parent="Plane" instance=ExtResource("36_g1i3r")]
 transform = Transform3D(0.0012566745, 0, -0.9999992, 0, 1, 0, 0.9999992, 0, 0.0012566745, 78.545, 8.438, -86.992)
+
+[node name="Shop" type="Area3D" parent="Plane/TheChurch"]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/TheChurch/Shop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.007248, -4.65487, 1.6710205)
+shape = SubResource("BoxShape3D_g1i3r")
 
 [node name="Tugrik4" parent="Plane" instance=ExtResource("5_bh8nc")]
 transform = Transform3D(0.7700792, 0, -0.63794833, 0, 1, 0, 0.63794833, 0, 0.7700792, -106.00177, 0.05866909, -99.29171)
@@ -566,6 +583,7 @@ shape = SubResource("ConcavePolygonShape3D_ic0uy")
 [connection signal="body_exited" from="Plane/Water3/Area3D" to="Plane/Water3" method="_on_area_3d_body_exited"]
 [connection signal="body_entered" from="Plane/Miluu/Hoy" to="Plane/Miluu" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Plane/FirstNight" to="." method="_on_area_3d_body_exited"]
+[connection signal="body_entered" from="Plane/TheChurch/Shop" to="Plane/otso" method="_on_shop_body_entered"]
 [connection signal="body_entered" from="Plane/Shop" to="." method="_on_shop_body_entered"]
 [connection signal="body_exited" from="Plane/Shop" to="." method="_on_shop_body_exited"]
 [connection signal="body_entered" from="Node3D/Water2/Area3D" to="Node3D/Water2" method="_on_area_3d_body_entered"]
