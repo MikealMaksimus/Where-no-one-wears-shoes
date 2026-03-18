@@ -17,6 +17,9 @@ func _process(_delta: float) -> void:
 		elif object.is_in_group("pickable"):
 			$CanvasLayer/E.show()
 			$CanvasLayer/E.text = "Pick up"
+		elif object.is_in_group("selling"):
+			$CanvasLayer/E.show()
+			$CanvasLayer/E.text = "buy 1₮"
 		elif object.is_in_group("interactable"):
 			$CanvasLayer/E.show()
 			$CanvasLayer/E.text = "Interact"

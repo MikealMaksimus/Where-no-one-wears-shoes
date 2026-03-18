@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bg5lhdbgtjqpx" path="res://Models/otso.glb" id="1_18x4b"]
 [ext_resource type="Script" uid="uid://coyx3y0rtsr2p" path="res://otso.gd" id="2_f3k8v"]
-[ext_resource type="AudioStream" uid="uid://bud7lgyonujyg" path="res://Voices/BlasphemousT.mp3" id="3_gr6pg"]
+[ext_resource type="AudioStream" uid="uid://ce1sqfxugsefd" path="res://Voices/for a price.mp3" id="3_gr6pg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gr6pg"]
 size = Vector3(0.74917316, 2.6981802, 0.28058434)
@@ -18,3 +18,5 @@ stream = ExtResource("3_gr6pg")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.037264854, -0.55121636, -0.012103781)
 shape = SubResource("BoxShape3D_gr6pg")
+
+[connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

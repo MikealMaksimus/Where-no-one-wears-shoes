@@ -48,4 +48,7 @@ func _on_cycler_timeout() -> void:
 
 
 func _on_world_dawned() -> void:
+	if Info.day >= 7:
+		queue_free()
+	
 	move()

@@ -17,3 +17,13 @@ func _on_cycler_timeout() -> void:
 	elif Info.day >= 3:
 		$Tomb41.show()
 		$dirt2.hide()
+
+
+func _on_world_dawned() -> void:
+	if Info.day >= 5:
+		$Tomb42.show()
+	elif Info.day >= 6:
+		$Tomb43.show()
+	elif Info.day >= 7:
+		$Tomb44.show()
+		$Tomb45.show()

@@ -19,4 +19,5 @@ fog_aerial_perspective = 0.75
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0
 adjustment_enabled = true
-adjustment_contrast = 2.5
+adjustment_brightness = 0.57
+adjustment_saturation = 0.4

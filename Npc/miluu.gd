@@ -31,14 +31,15 @@ func move():
 
 
 func _on_audio_stream_player_3d_finished() -> void:
-	$StaticBody3D.add_to_group("interactable")
+	if not Info.day == 2 or Info.time == "dawn":
+		$StaticBody3D.add_to_group("interactable")
 
 func line():
 	if Info.day == 2 and Info.time == "dawn":
 		$AudioStreamPlayer3D.stream = two
 	elif Info.day == 2:
-		$AudioStreamPlayer.stream = three
-		Info.money += 2
+		$AudioStreamPlayer3D.stream = three
+		Info.money += 1
 	elif second:
 		$AudioStreamPlayer3D.stream = sleep
 	else:

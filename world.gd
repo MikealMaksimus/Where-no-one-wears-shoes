@@ -12,11 +12,12 @@ signal dawned
 var shopping := false
 
 func _ready() -> void:
+	Engine.time_scale = 10
 	Goster.load_game()
 	if Info.opend:
-		print("close")
+		pass
+		#get_tree().quit()
 	else:
-		print("open")
 		Goster.open(true)
 	
 	$WorldEnvironment.environment = dusk
@@ -24,14 +25,10 @@ func _ready() -> void:
 	$DirectionalLight3D.rotation_degrees.x = -15.0
 
 func  _process(_delta: float) -> void:
-	
-	if Input.is_action_just_pressed("skip"):
-		$Cycler.wait_time = 7
-		$Cycler.start()
-	
 	if Info.NewDay:
 		Info.NewDay = false
 		Info.day += 1
+		time = 0
 		dawner()
 		$Cycler.wait_time = 150 - Info.day * 10
 
@@ -82,7 +79,6 @@ func dawner():
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		$Cycler.start()
 		nighter()
 		$Plane/FirstNight.queue_free()
 

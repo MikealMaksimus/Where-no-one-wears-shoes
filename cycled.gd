@@ -2,7 +2,8 @@ extends CanvasLayer
 
 
 func dawn():
-	if Info.day == 8:
+	print(Info.day)
+	if Info.day == 7 and not Info.immortality:
 		get_tree().change_scene_to_file("res://hall_of_judgment.tscn")
 	else:
 		$Time.play("Dawn")
@@ -10,19 +11,17 @@ func dawn():
 		Info.cycling = true
 
 func mornin():
-	if Info.day == 1:
-		return "Rise and shine"
+	if Info.immortality:
+		return "What will you do with it"
 	elif Info.day == 2:
 		return "Up you go, young one"
 	elif Info.day == 3:
 		return "Make it count"
 	elif Info.day == 4:
-		return "The house feels still"
-	elif Info.day == 5:
 		return "The days are catching up"
-	elif Info.day == 6:
+	elif Info.day == 5:
 		return "Easy there, old man."
-	elif Info.day == 7:
+	elif Info.day == 6:
 		return "today might be the last"
 
 func day():
@@ -39,5 +38,4 @@ func night():
 
 
 func _on_time_animation_finished(anim_name: StringName) -> void:
-	if Info.day <= 8:
-		Info.cycling = false
+	Info.cycling = false

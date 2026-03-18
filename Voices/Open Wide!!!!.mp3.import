@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2i82j3uu6p32"
+path="res://.godot/imported/Open Wide!!!!.mp3-fc805273e08fa1914f50efc389ac2d20.mp3str"
+
+[deps]
+
+source_file="res://Voices/Open Wide!!!!.mp3"
+dest_files=["res://.godot/imported/Open Wide!!!!.mp3-fc805273e08fa1914f50efc389ac2d20.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

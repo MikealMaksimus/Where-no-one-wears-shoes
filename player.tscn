@@ -68,6 +68,7 @@ near = 0.01
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.19099998, -0.54002106)
 target_position = Vector3(0, 0, -2.2)
 collision_mask = 3
+hit_from_inside = true
 
 [node name="Hand" type="Node3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.705, -0.302, -0.768)

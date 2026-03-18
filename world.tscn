@@ -1,10 +1,11 @@
-[gd_scene load_steps=61 format=3 uid="uid://c5ph8vafspiow"]
+[gd_scene load_steps=64 format=3 uid="uid://c5ph8vafspiow"]
 
 [ext_resource type="PackedScene" uid="uid://c2xxqua73hahv" path="res://player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://ckoyh7u5ej1uu" path="res://vhs.tscn" id="1_pkg7o"]
 [ext_resource type="Script" uid="uid://bps7pfu7gcurp" path="res://world.gd" id="1_udxuc"]
 [ext_resource type="Environment" uid="uid://dd3xhkxwvhl04" path="res://Tres/Day.tres" id="3_bh8nc"]
 [ext_resource type="PackedScene" uid="uid://nd3x34168sj2" path="res://repeller.tscn" id="3_gggvi"]
+[ext_resource type="Script" uid="uid://dsxqixyfdpop6" path="res://world_environment.gd" id="4_7qk3m"]
 [ext_resource type="MeshLibrary" uid="uid://crvuu27smniyr" path="res://Tres/TreeMesh.tres" id="4_036b0"]
 [ext_resource type="PackedScene" uid="uid://cu1xw0uasml45" path="res://cycled.tscn" id="4_ikiii"]
 [ext_resource type="PackedScene" uid="uid://vayvxqxw0i5o" path="res://Meshes/tugrik.tscn" id="5_bh8nc"]
@@ -204,7 +205,7 @@ size = Vector3(10, 1, 1600)
 size = Vector3(54.692944, 1, 24.786552)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_26xuy"]
-size = Vector3(59.028503, 1, 199.60954)
+size = Vector3(61.981537, 1, 199.60954)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjr1n"]
 size = Vector3(0.13781738, 3.1021729, 3.6839662)
@@ -222,11 +223,17 @@ data = PackedVector3Array(-3.4924998, 0.099999994, 0.25, 3.4924998, 0.099999994,
 [sub_resource type="BoxShape3D" id="BoxShape3D_g1i3r"]
 size = Vector3(15.706223, 6.856529, 12.750283)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xpnt2"]
+size = Vector3(11.90271, 3.9727173, 15.85791)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7qk3m"]
+size = Vector3(14.373383, 1, 0.85876465)
+
 [node name="World" type="Node3D"]
 script = ExtResource("1_udxuc")
 
 [node name="Player" parent="." instance=ExtResource("1_f3sb7")]
-transform = Transform3D(-0.10122992, 0, -0.9948631, 0, 1, 0, 0.9948631, 0, -0.10122992, -69, 0.072, -38)
+transform = Transform3D(-0.10122992, 0, -0.9948631, 0, 1, 0, 0.9948631, 0, -0.10122992, 56.339767, 0.072, 19.992073)
 
 [node name="Cycler" type="Timer" parent="."]
 wait_time = 150.0
@@ -234,6 +241,7 @@ wait_time = 150.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_bh8nc")
 camera_attributes = SubResource("CameraAttributesPhysical_ikiii")
+script = ExtResource("4_7qk3m")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.9366722, 0.32236767, 0.1368369, -3.4158795e-08, -0.39073104, 0.92050487, 0.35020748, 0.8622112, 0.36598694, 0, 0, 0)
@@ -308,6 +316,9 @@ shape = SubResource("ConcavePolygonShape3D_ic0uy")
 
 [node name="Bridge" parent="Plane" instance=ExtResource("9_ioo17")]
 transform = Transform3D(0.4556226, 0, 0.890173, 0, 1, 0, -0.890173, 0, 0.4556226, 0.81407547, 0.33160686, -27.381361)
+
+[node name="Tugrik" parent="Plane/Bridge" instance=ExtResource("5_bh8nc")]
+transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, 0, -3.2212932, 0)
 
 [node name="House" type="GridMap" parent="Plane"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.21, 0, 0)
@@ -405,7 +416,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/FirstNight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.458519, 0.5213871, 0.23874855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.982002, 0.5213871, 0.23874855)
 shape = SubResource("BoxShape3D_26xuy")
 
 [node name="Graves" parent="Plane" instance=ExtResource("22_wukud")]
@@ -498,6 +509,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.08013, 0.56755495, 59.4402
 [node name="Tugrik6" parent="Plane" instance=ExtResource("5_bh8nc")]
 transform = Transform3D(0.0012566745, 0, -0.9999992, 0, 1, 0, 0.9999992, 0, 0.0012566745, 79.85839, 0.8069129, -86.992)
 
+[node name="Tugrik8" parent="Plane" instance=ExtResource("5_bh8nc")]
+transform = Transform3D(0.0012566745, 0, -0.9999992, 0, 1, 0, 0.9999992, 0, 0.0012566745, 76.83683, 16.653511, -88.31352)
+
 [node name="TheChurch" parent="Plane" instance=ExtResource("36_g1i3r")]
 transform = Transform3D(0.0012566745, 0, -0.9999992, 0, 1, 0, 0.9999992, 0, 0.0012566745, 78.545, 8.438, -86.992)
 
@@ -517,8 +531,8 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/Shop"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.672752, 2.0402527, -42.97207)
-shape = SubResource("BoxShape3D_g1i3r")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.796593, 2.5003052, -42.990868)
+shape = SubResource("BoxShape3D_xpnt2")
 
 [node name="Marker3D" type="Marker3D" parent="Plane"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69, 0.072, -38)
@@ -531,6 +545,19 @@ transform = Transform3D(-0.96832657, 0, 0.24968712, 0, 1, 0, -0.24968712, 0, -0.
 
 [node name="guard" parent="Plane" instance=ExtResource("42_jas3d")]
 transform = Transform3D(-0.020767927, 0, -0.99978423, 0, 1, 0, 0.99978423, 0, -0.020767927, -94.72614, 1.3317957, 94.571884)
+
+[node name="Tugrik7" parent="Plane" instance=ExtResource("5_bh8nc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.74098, 8.652217, -39.864098)
+
+[node name="Roof" type="StaticBody3D" parent="Plane"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.60167, -45.400787, -120.83757)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -163.48637, 53.49469, 81.82325)
+shape = SubResource("BoxShape3D_7qk3m")
+
+[node name="io" parent="Plane" instance=ExtResource("40_7htu6")]
+transform = Transform3D(0.57313603, 0, -0.17752485, 0, 0.59999996, 0, 0.17752485, 0, 0.57313603, -54.28388, 2.1419342, -42.11582)
 
 [node name="Node3D" parent="." instance=ExtResource("22_il2jm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1600, 0)
@@ -546,9 +573,6 @@ collision_mask = 5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Water2/Area3D"]
 shape = SubResource("ConcavePolygonShape3D_ic0uy")
 
-[node name="io" parent="." instance=ExtResource("40_7htu6")]
-transform = Transform3D(0.57313603, 0, -0.17752485, 0, 0.59999996, 0, 0.17752485, 0, 0.57313603, -54.28388, 2.1419342, -42.11582)
-
 [node name="Node3D2" parent="." instance=ExtResource("22_il2jm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1600, 0)
 
@@ -563,9 +587,12 @@ collision_mask = 5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D2/Water2/Area3D"]
 shape = SubResource("ConcavePolygonShape3D_ic0uy")
 
+[connection signal="dawned" from="." to="WorldEnvironment" method="_on_world_dawned"]
 [connection signal="dawned" from="." to="Plane/Miluu" method="_on_world_dawned"]
+[connection signal="dawned" from="." to="Plane/Graves" method="_on_world_dawned"]
 [connection signal="dawned" from="." to="Plane/Masela" method="_on_world_dawned"]
 [connection signal="dawned" from="." to="Plane/kolli" method="_on_world_dawned"]
+[connection signal="dawned" from="." to="Plane/otso" method="_on_world_dawned"]
 [connection signal="dawned" from="." to="Plane/guard" method="_on_world_dawned"]
 [connection signal="bought" from="Player" to="Plane/Masela" method="_on_player_bought"]
 [connection signal="poor" from="Player" to="Plane/Masela" method="_on_player_poor"]
@@ -586,6 +613,7 @@ shape = SubResource("ConcavePolygonShape3D_ic0uy")
 [connection signal="body_entered" from="Plane/TheChurch/Shop" to="Plane/otso" method="_on_shop_body_entered"]
 [connection signal="body_entered" from="Plane/Shop" to="." method="_on_shop_body_entered"]
 [connection signal="body_exited" from="Plane/Shop" to="." method="_on_shop_body_exited"]
+[connection signal="tripping" from="Plane/otso" to="WorldEnvironment" method="_on_otso_tripping"]
 [connection signal="body_entered" from="Node3D/Water2/Area3D" to="Node3D/Water2" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Node3D/Water2/Area3D" to="Node3D/Water2" method="_on_area_3d_body_exited"]
 [connection signal="body_entered" from="Node3D2/Water2/Area3D" to="Node3D2/Water2" method="_on_area_3d_body_entered"]
