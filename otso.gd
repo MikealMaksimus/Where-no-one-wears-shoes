@@ -5,6 +5,7 @@ var blessing := preload("res://Voices/Blessings T.mp3")
 var church := preload("res://Voices/This is the church.mp3")
 var treat := preload("res://Voices/for a price.mp3")
 var open := preload("res://Voices/Open Wide!!!!.mp3")
+var broke := preload("res://Voices/broke.mp3")
 
 var second := false
 var selling := false
@@ -36,7 +37,8 @@ func interact():
 		await $AudioStreamPlayer3D.finished
 		emit_signal("tripping")
 	else:
-		print("poor")
+		$AudioStreamPlayer3D.stream = broke
+		$AudioStreamPlayer3D.play()
 
 func _on_shop_body_entered(body: Node3D) -> void:
 	if Info.time == "night":

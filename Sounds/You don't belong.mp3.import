@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnkondlpcxtdl"
+path="res://.godot/imported/You don't belong.mp3-f69549447285f410c12bfe51490865d6.mp3str"
+
+[deps]
+
+source_file="res://Sounds/You don't belong.mp3"
+dest_files=["res://.godot/imported/You don't belong.mp3-f69549447285f410c12bfe51490865d6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
