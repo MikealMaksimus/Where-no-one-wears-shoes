@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c2xxqua73hahv" path="res://player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://ckoyh7u5ej1uu" path="res://vhs.tscn" id="1_pkg7o"]
 [ext_resource type="Script" uid="uid://bps7pfu7gcurp" path="res://world.gd" id="1_udxuc"]
-[ext_resource type="Environment" uid="uid://dd3xhkxwvhl04" path="res://Tres/Day.tres" id="3_bh8nc"]
+[ext_resource type="Environment" uid="uid://dlp41enoyjia0" path="res://Tres/Night.tres" id="3_7qk3m"]
 [ext_resource type="PackedScene" uid="uid://nd3x34168sj2" path="res://repeller.tscn" id="3_gggvi"]
 [ext_resource type="Script" uid="uid://dsxqixyfdpop6" path="res://world_environment.gd" id="4_7qk3m"]
 [ext_resource type="MeshLibrary" uid="uid://crvuu27smniyr" path="res://Tres/TreeMesh.tres" id="4_036b0"]
@@ -239,7 +239,7 @@ transform = Transform3D(-0.10122992, 0, -0.9948631, 0, 1, 0, 0.9948631, 0, -0.10
 wait_time = 150.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("3_bh8nc")
+environment = ExtResource("3_7qk3m")
 camera_attributes = SubResource("CameraAttributesPhysical_ikiii")
 script = ExtResource("4_7qk3m")
 
@@ -489,7 +489,10 @@ shape = SubResource("ConcavePolygonShape3D_bo7i5")
 transform = Transform3D(-0.02567097, 0, -0.99967045, 0, 1, 0, 0.99967045, 0, -0.02567097, -65.99064, 1.7503419, -36.07366)
 
 [node name="Candle3" parent="Plane" instance=ExtResource("13_2o6r5")]
-transform = Transform3D(-0.99993205, 0, 0.01165849, 0, 1, 0, -0.01165849, 0, -0.99993205, -100.480316, 0.10379624, 94.89232)
+transform = Transform3D(-0.99993205, 0, 0.01165849, 0, 1, 0, -0.01165849, 0, -0.99993205, -97.455025, 0.10379624, 94.67789)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Plane/Candle3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6106796, 2.4096322, -1.4382095)
 
 [node name="shit" parent="Plane" instance=ExtResource("32_jjr1n")]
 transform = Transform3D(-0.99993205, 0, 0.01165849, 0, 1, 0, -0.01165849, 0, -0.99993205, -98.96728, 1.9759521, 92.102196)

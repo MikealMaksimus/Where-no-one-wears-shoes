@@ -12,7 +12,6 @@ signal dawned
 var shopping := false
 
 func _ready() -> void:
-	Engine.time_scale = 10
 	Goster.load_game()
 	if Info.opend:
 		pass

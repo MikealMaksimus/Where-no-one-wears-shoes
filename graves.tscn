@@ -17,7 +17,7 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 8.349383, 0
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 8.14373, 0.2148956, -63.354603)
 
 [node name="Tomb43" parent="." instance=ExtResource("1_ripkk")]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 8.14373, 0.2148956, -60.107105)
+transform = Transform3D(0.9723942, 0, 0.23334351, 0, 1, 0, -0.23334351, 0, 0.9723942, 8.14373, 0.2148956, -60.306957)
 
 [node name="Tomb44" parent="." instance=ExtResource("1_ripkk")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 8.14373, 0.2148956, -57.494534)

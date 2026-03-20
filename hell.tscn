@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c2xxqua73hahv" path="res://player.tscn" id="1_u7518"]
 [ext_resource type="Texture2D" uid="uid://cn7go6wagvsi2" path="res://Models/ganymede_ganymede.png" id="2_cemct"]
-[ext_resource type="PackedScene" uid="uid://b8vhur2egkdxw" path="res://Models/kolli.glb" id="3_cemct"]
+[ext_resource type="PackedScene" uid="uid://bxulg58dpgq2i" path="res://Npc/JohnH.tscn" id="3_cemct"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ngpof"]
 albedo_texture = ExtResource("2_cemct")
@@ -91,7 +91,7 @@ mesh = SubResource("BoxMesh_tvd5m")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D6/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_lruhd")
 
-[node name="kolli" parent="." instance=ExtResource("3_cemct")]
+[node name="JohnH" parent="." instance=ExtResource("3_cemct")]
 transform = Transform3D(-0.5581072, 0, 0.82976884, 0, 1, 0, -0.82976884, 0, -0.5581072, 0.7101118, 0.6990266, -0.40068617)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
