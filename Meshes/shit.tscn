@@ -26,6 +26,21 @@ data = PackedVector3Array(-0.099999994, 0.97499996, 0.45, 0.099999994, 0.9749999
 [sub_resource type="BoxShape3D" id="BoxShape3D_hqbcm"]
 size = Vector3(7.1415405, 3.1003418, 4.734436)
 
+[sub_resource type="Animation" id="Animation_ug4i2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gussi/Sprite3D2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_t21m7"]
 resource_name = "new_animation"
 length = 0.5
@@ -41,21 +56,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_ug4i2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Gussi/Sprite3D2:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nnjiu"]

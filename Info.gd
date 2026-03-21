@@ -13,7 +13,10 @@ var dig := false
 var repel := false
 var repelPoint := Vector3(0, 0, 0)
 
+var enterd := false
+var eaten := false
+
 var immortality := true 
 var opend := false
 
-var speed := 5.0 #56
+var speed := 50.0 #56

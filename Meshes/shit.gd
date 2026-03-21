@@ -7,6 +7,8 @@ func _ready() -> void:
 func _on_inside_body_entered(body: Node3D) -> void:
 	if not body.is_in_group("player"):
 		return
+	
+	Info.enterd = true
 	$AnimationPlayer.play("new_animation")
 	if Info.moons < 4:
 		$Door.position.y = -0.895

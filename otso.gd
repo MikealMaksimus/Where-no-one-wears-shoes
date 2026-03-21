@@ -12,8 +12,6 @@ var selling := false
 
 signal tripping
 
-
-
 func interact():
 	
 	if Info.time == "night":
@@ -32,6 +30,7 @@ func interact():
 	elif Info.money >= 1:
 		$AudioStreamPlayer3D.stream = open
 		selling = false
+		Info.eaten = true
 		Info.money -= 1
 		$AudioStreamPlayer3D.play()
 		await $AudioStreamPlayer3D.finished
