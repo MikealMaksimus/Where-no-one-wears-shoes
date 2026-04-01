@@ -1,6 +1,6 @@
 extends Node
 
-const SAVE_PATH = "user://savse.json"
+const SAVE_PATH = "user://iuoihoiho.json"
 
 # Data that will be saved
 var save_data = {

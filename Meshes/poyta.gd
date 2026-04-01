@@ -12,6 +12,7 @@ var hell := preload("res://qrosping/Negative.mp3")
 var score := -1
 
 func interact():
+	get_parent().shut()
 	$qrosp.remove_from_group("interactable")
 	$AudioStreamPlayer.stream = greetings
 	$AudioStreamPlayer.play()
@@ -27,8 +28,8 @@ func interact():
 	$AudioStreamPlayer.stream = virtues
 	$AudioStreamPlayer.play()
 	await $AudioStreamPlayer.finished
-	if Info.enterd:
-		$AudioStreamPlayer.stream = entering
+	if Info.eaten:
+		$AudioStreamPlayer.stream = eating
 		$AudioStreamPlayer.play()
 		await $AudioStreamPlayer.finished
 		score += 1

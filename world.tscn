@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c2xxqua73hahv" path="res://player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://ckoyh7u5ej1uu" path="res://vhs.tscn" id="1_pkg7o"]
 [ext_resource type="Script" uid="uid://bps7pfu7gcurp" path="res://world.gd" id="1_udxuc"]
-[ext_resource type="Environment" uid="uid://dlp41enoyjia0" path="res://Tres/Night.tres" id="3_7qk3m"]
+[ext_resource type="Environment" uid="uid://dd3xhkxwvhl04" path="res://Tres/Day.tres" id="3_7qk3m"]
 [ext_resource type="PackedScene" uid="uid://nd3x34168sj2" path="res://repeller.tscn" id="3_gggvi"]
 [ext_resource type="Script" uid="uid://dsxqixyfdpop6" path="res://world_environment.gd" id="4_7qk3m"]
 [ext_resource type="MeshLibrary" uid="uid://crvuu27smniyr" path="res://Tres/TreeMesh.tres" id="4_036b0"]
@@ -510,7 +510,7 @@ transform = Transform3D(0.7241258, -0.68922627, 0.024677651, 0.5, 0.50000006, -0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.08013, 0.56755495, 59.440285)
 
 [node name="Tugrik6" parent="Plane" instance=ExtResource("5_bh8nc")]
-transform = Transform3D(0.0012566745, 0, -0.9999992, 0, 1, 0, 0.9999992, 0, 0.0012566745, 79.85839, 0.8069129, -86.992)
+transform = Transform3D(0.0012566745, 0, -0.9999992, 0, 1, 0, 0.9999992, 0, 0.0012566745, 79.85839, 0.85083437, -87.327736)
 
 [node name="Tugrik8" parent="Plane" instance=ExtResource("5_bh8nc")]
 transform = Transform3D(0.0012566745, 0, -0.9999992, 0, 1, 0, 0.9999992, 0, 0.0012566745, 76.83683, 16.653511, -88.31352)

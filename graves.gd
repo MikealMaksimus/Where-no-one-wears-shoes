@@ -4,6 +4,10 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Tomb41.hide()
+	$Tomb42.hide()
+	$Tomb43.hide()
+	$Tomb44.hide()
+	$Tomb45.hide()
 	$dirt2.hide()
 
 

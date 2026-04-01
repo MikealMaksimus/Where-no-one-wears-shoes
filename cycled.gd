@@ -2,7 +2,6 @@ extends CanvasLayer
 
 
 func dawn():
-	print(Info.day)
 	if Info.day == 7 and not Info.immortality:
 		get_tree().change_scene_to_file("res://hall_of_judgment.tscn")
 	else:

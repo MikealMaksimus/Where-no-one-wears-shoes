@@ -16,7 +16,7 @@ var repelPoint := Vector3(0, 0, 0)
 var enterd := false
 var eaten := false
 
-var immortality := true 
+var immortality := false 
 var opend := false
 
-var speed := 50.0 #56
+var speed := 5.0 

@@ -7,7 +7,7 @@ var headBob_aplitude := 0.1
 var headBob_time := 0.0
 
 var footstep_can_play := true
-var footstep_landed
+var footstep_landed 
 
 var not_flooring = false
 
@@ -135,3 +135,9 @@ func repulse(delta):
 
 func durability():
 	$Head.mammaMia()
+
+
+func _on_roaming_timeout() -> void:
+	if Info.time == "night":
+		$Creeper.play()
+		$roaming.start()

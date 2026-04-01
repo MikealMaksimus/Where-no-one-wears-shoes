@@ -7,3 +7,6 @@ func _ready() -> void:
 func _on_audio_stream_player_finished() -> void:
 	$chanter.stream = load("res://Sounds/qrospChant.mp3")
 	$chanter.play()
+
+func shut():
+	$chanter.volume_db = -25
