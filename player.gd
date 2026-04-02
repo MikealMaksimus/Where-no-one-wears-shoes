@@ -141,3 +141,7 @@ func _on_roaming_timeout() -> void:
 	if Info.time == "night":
 		$Creeper.play()
 		$roaming.start()
+
+func subtitles():
+	print("a")
+	$DevilSubtitles.play("Sub")

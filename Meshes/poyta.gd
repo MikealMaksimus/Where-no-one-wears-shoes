@@ -34,7 +34,7 @@ func interact():
 		await $AudioStreamPlayer.finished
 		score += 1
 	
-	if score > 0:
+	if score >= 0:
 		$AudioStreamPlayer.stream = heaven
 		$AudioStreamPlayer.play()
 		await $AudioStreamPlayer.finished

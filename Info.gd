@@ -19,4 +19,4 @@ var eaten := false
 var immortality := false 
 var opend := false
 
-var speed := 5.0 
+var speed := 50.0 

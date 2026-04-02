@@ -15,7 +15,7 @@ func _ready() -> void:
 	Goster.load_game()
 	if Info.opend:
 		pass
-		get_tree().quit()
+		##################################get_tree().quit()
 	else:
 		Goster.open(true)
 	
